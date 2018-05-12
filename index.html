@@ -30,60 +30,54 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
         crossorigin="anonymous"></script>
 
-    <!-- Firebase link -->
-    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
-
-    <!-- Google font test -->
+    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto|Shadows+Into+Light" rel="stylesheet">
 
-    <!--Links for Census API-->
-    <script src="https://cdn.rawgit.com/uscensusbureau/citysdk/gh-pages/static/js/citysdk/core/citysdk.js"></script>
-    <script src="https://cdn.rawgit.com/uscensusbureau/citysdk/gh-pages/static/js/citysdk/modules/census.citysdk.js"></script>
-
-
-    <title>Rumble By The River</title>
+    <title>Michael Yang</title>
 
 </head>
 
 <body>
 
     <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-            <img src="">MICHAEL YANG
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+        <a class="navbar-brand ml-4" href="#landPageRef">
+            <img id="logo" src="assets/images/michaelyang_white.png" width="250">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-end mr-4" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">About
+                    <a class="nav-link" href="#aboutPageRef">ABOUT
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
+                    <a class="nav-link" href="#portfolioPageRef">PORTFOLIO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#contactPageRef">CONTACT</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <!-- Landing Page -->
-    <div class="card card-outline-none border-0 m-0">
-        <img class="card-img rounded-0" src="assets/images/tree_in_badlands.jpg" alt="Burger">
+    <div id="landingPageRef" class="row m-0 p-0">
+        <div class="col-md-12 m-0 p-0">
+            <div id="landingPage" class="card card-outline-none border-0 rounded-0 m-0 p-0">
+            </div>
+        </div>
     </div>
 
     <!-- About Page: Presents our "pitch" to users -->
-    <hr class="my-1">
-    <div class="row row-eq-height m-0 p-0">
+    <div id="aboutPageRef" class="row row-eq-height m-0 p-0">
 
         <div class="col-md-12 m-0 p-0">
-            <div class="jumbotron jumbotron-fluid text-left m-0 text-center">
+            <div id="about" class="jumbotron jumbotron-fluid text-left m-0 text-center">
                 <div class="container">
                     <h1 class="display-5 m-0 p-0">MEET YOUR DEVELOPER</h1>
                     <hr class="my-4 customLineBr">
@@ -99,11 +93,10 @@
     </div>
 
     <!-- Portfolio Page -->
-    <hr class="my-1">
-    <div class="row row-eq-height m-0 p-0">
+    <div id="portfolioPageRef" class="row row-eq-height m-0 p-0">
 
         <div class="col-md-12 m-0 p-0">
-            <div class="jumbotron jumbotron-fluid text-left m-0 text-center">
+            <div id="portfolio" class="jumbotron jumbotron-fluid text-left m-0 text-center">
                 <div class="container">
                     <h1 class="display-5 m-0 p-0">PORTFOLIO</h1>
                     <hr class="my-4 customLineBr">
@@ -111,35 +104,37 @@
                     <div class="row m-0 p-0 text-center">
 
                         <div class="col-md-4 m-0 p-0">
-                            <div class="card card-outline-none border-0 rounded-0 bg-faded px-3 py-5 border-0">
+                            <div class="card card-outline-none border-0 rounded-0 bg-transparent px-3 py-5 border-0">
                                 <div class="card-block">
-                                    <p class="h3">MINNEAPOLIS</p>
-                                    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention
-                                        to featured content or information.</p>
-                                        <a class="btn btn-primary btn-lg rounded-0" href="#" role="button">Learn more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 m-0 p-0">
-                            <div class="card card-outline-none border-0 rounded-0 bg-faded px-3 py-5 border-0">
-                                <div class="card-block">
-                                    <p class="h3">ST.PAUL</p>
-                                    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention
-                                        to featured content or information.</p>
+                                    <img src="assets/images/feather.png" height="200">
+                                    <p class="h3 mt-4">Project Icarus</p>
                                     <p class="lead">
-                                        <a class="btn btn-primary btn-lg rounded-0" href="#" role="button">Learn more</a>
+                                        <a class="btn btn-lg rounded-0 border-0 mt-3" href="#" role="button">Liveview</a>
+                                        <a class="btn btn-lg rounded-0 border-0 mt-3" href="#" role="button">Codeview</a>
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 m-0 p-0">
-                            <div class="card card-outline-none border-0 rounded-0 bg-faded px-3 py-5 border-0">
+                            <div class="card card-outline-none border-0 rounded-0 bg-transparent px-3 py-5 border-0">
                                 <div class="card-block">
-                                    <p class="h3">ST.PAUL</p>
-                                    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention
-                                        to featured content or information.</p>
+                                    <img src="assets/images/clock.png" height="200">
+                                    <p class="h3 mt-4">Moment.js</p>
                                     <p class="lead">
-                                        <a class="btn btn-primary btn-lg rounded-0" href="#" role="button">Learn more</a>
+                                        <a class="btn btn-lg rounded-0 border-0 mt-3" href="#" role="button">Liveview</a>
+                                        <a class="btn btn-lg rounded-0 border-0 mt-3" href="#" role="button">Codeview</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 m-0 p-0">
+                            <div class="card card-outline-none border-0 rounded-0 bg-transparent px-3 py-5 border-0">
+                                <div class="card-block">
+                                    <img src="assets/images/quiz.png" height="200">
+                                    <p class="h3 mt-4">JavaScript Quiz</p>
+                                    <p class="lead">
+                                        <a class="btn btn-lg rounded-0 border-0 mt-3" href="#" role="button">Liveview</a>
+                                        <a class="btn btn-lg rounded-0 border-0 mt-3" href="#" role="button">Codeview</a>
                                     </p>
                                 </div>
                             </div>
@@ -154,32 +149,32 @@
     </div>
 
     <!-- Contact Page -->
-    <hr class="my-1">
-    <div class="row row-eq-height m-0 p-0">
+    <div id="contactPageRef" class="row row-eq-height m-0 p-0">
 
         <div class="col-md-12 m-0 p-0">
-            <div class="jumbotron jumbotron-fluid text-left m-0 text-center">
+            <div id="contact" class="jumbotron jumbotron-fluid text-left m-0 text-center">
                 <div class="container">
 
                     <h1 class="display-5 m-0 p-0">CONTACT</h1>
                     <hr class="my-4 customLineBr">
+                    <p>Have questions? Please fill out this form and I'll check in with you. For other inquiries, email <a id="emailLink" href="mailto:michaelcyang7@gmail.com">michaelcyang7@gmail.com</a>.</p>
 
                     <form>
-                        <div class="form-group">
+                        <div class="form-group text-left">
                             <label for="exampleFormControlInput1">Name</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Michael Yang">
+                            <input type="text" class="form-control rounded-0" id="exampleFormControlInput1" placeholder="Michael Yang">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group text-left">
                             <label for="exampleFormControlInput1">Email</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="michaelcyang7@gmail.com">
+                            <input type="email" class="form-control rounded-0" id="exampleFormControlInput1" placeholder="michaelcyang7@gmail.com">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group text-left">
                             <label for="exampleFormControlTextarea1">Questions / Comments</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="I'm want to know more about..."></textarea>
+                            <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="3" placeholder="I'm want to know more about..."></textarea>
                         </div>
                         <p class="lead">
-                                <a class="btn btn-primary btn-lg rounded-0" href="#" role="button">Submit</a>
-                            </p>
+                            <a class="btn btn-primary btn-lg rounded-0 border-0" href="#" role="button">Submit</a>
+                        </p>
                     </form>
 
                 </div>
@@ -193,9 +188,16 @@
 <footer>
     <div id="theFooter" class="footer mt-0 p-5">
         <div class="row m-0">
-            <div class="col-md-12">
-                <p class="text-center">RUMBLE BY THE RIVER is a TEAM ICARUS production, developed as a part of the UMN Coding Bootcamp's Student
-                    Coursework. © 2018. Rights Reserved.</p>
+            <div class="col-md-4 offset-2">
+                <p class="text-center"><br>By Michael Yang © 2018. All Rights Reserved.</p>
+            </div>
+            <div id="socMedia" class="col-md-4 offset-2 text-left">
+                <a href="https://github.com/chaelyoung">
+                    <img src="assets/images/github.png" width="50">
+                </a>
+                <a href="https://www.linkedin.com/in/michaelcyang7/">
+                    <img src="assets/images/linkedin.png" width="50">
+                </a>
             </div>
         </div>
     </div>

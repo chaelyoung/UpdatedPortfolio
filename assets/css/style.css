@@ -1,6 +1,7 @@
 body {
     background: black;
-    color: white;
+    color: #141301 !important;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 a {
@@ -8,26 +9,21 @@ a {
 }
 
 a:hover {
-    color: gold !important;
 }
 
 hr {
-    width: 50px;
+    width: 100px;
     border-width: 5px;
-    border-color: black;
+    border-color: #B80C09;
 }
 
 label {
-    font-weight: bold;
 }
 
 /* Bootstrap Mods */
 
 .navbar {
-    background: #3a3535;
-    height: 75px;
-    z-index: 100;
-    margin-top: 0;
+    background: #141301;
     transition: background-color 1s ease 0s;
 }
 
@@ -37,6 +33,9 @@ label {
 }
 
 .nav-link:hover {
+    border-bottom: solid 1px #B80C09;
+    display: inline;
+    padding-bottom: 3px;
 }
 
 .card {
@@ -44,7 +43,7 @@ label {
 }
 
 .btn {
-    background: #829ca2;
+    background: #B80C09;
     color: white;
 }
 
@@ -60,11 +59,18 @@ label {
 /* ID mods */
 
 #logo {
-    margin-top: 20px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+#navbarNav {
+    font-family: 'Amatic SC', cursive;
+    font-size: 24px;
 }
 
 #landingPage {
-    background: url("../images/tree_in_badlands.jpg");
+    background: url("../images/mpls_set1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -76,8 +82,12 @@ label {
     margin-top: -75px !important;
 }
 
-#about {
-    background: #574e4e !important;
+#aboutPage {
+    background: #E5E7E6 !important;
+}
+
+.customH1 {
+    font-family: 'Rock Salt', cursive;
 }
 
 #headshot {
@@ -85,16 +95,16 @@ label {
     margin-bottom: 30px;
 }
 
-#portfolio {
-    background: #4a523b !important;
+#portfolioPage {
+    background: darkgray !important;
 }
 
 #contact {
-    background: #947a51 !important;
+    background: #E5E7E6 !important;
 }
 
 #emailLink {
-    color: gold !important;
+    color: #B80C09 !important;
 }
 
 #emailLink:hover {
@@ -102,9 +112,13 @@ label {
 }
 
 #theFooter {
-    background: #3a3535;
+    background: #141301;
     height: 200;
     vertical-align: center !important;
+}
+
+#footerCredit {
+    color: #E5E7E6;
 }
 
 #socMedia {
